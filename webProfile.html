@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Group-9 Profile</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link rel="stylesheet" as="style" onload="this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <style>
+    .hover-scale:hover {
+      transform: scale(1.05);
+      transition: transform 0.2s;
+    }
+    .hover-bg:hover {
+      background-color: #004080; 
+      transition: background-color 0.2s;
+    }
+  </style>
+</head>
+<body class="font-sans bg-gradient-to-r from-blue-100 via-blue-200 to-blue-300 text-[#1C160C]">
+  <div class="min-h-screen flex flex-col justify-between">
+    <header class="bg-white shadow-md py-4">
+      <div class="container mx-auto flex items-center justify-between px-6">
+        <div class="flex items-center gap-3">
+          <div class="size-4 text-[#004080]"> 
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="w-5 h-5">
+              <path d="M192 512C86 512 0 426 0 320C0 228.8 130.2 57.7 166.6 11.7C172.6 4.2 181.5 0 191.1 0l1.8 0c9.6 0 18.5 4.2 24.5 11.7C253.8 57.7 384 228.8 384 320c0 106-86 192-192 192zM96 336c0-8.8-7.2-16-16-16s-16 7.2-16 16c0 61.9 50.1 112 112 112c8.8 0 16-7.2 16-16s-7.2-16-16-16c-44.2 0-80-35.8-80-80z"/>
+            </svg>
+          </div>
+          <h2 class="text-xl font-bold tracking-tight text-[#004080]">Web Profile Group - 9</h2>
+        </div>
+        <nav class="flex items-center space-x-8">
+          <a href="#" class="text-sm font-medium hover:underline text-[#004080]">Dashboard</a> 
+          <a href="#" class="text-sm font-medium hover:underline text-[#004080]">Profile</a> 
+          <a href="#" class="text-sm font-medium hover:underline text-[#004080]">Descriptions</a> 
+          <!-- <a href="#" class="text-sm font-medium hover:underline text-[#004080]">Payments</a> 
+          <a href="#" class="text-sm font-medium hover:underline text-[#004080]">Complaints</a> 
+          <a href="#" class="text-sm font-medium hover:underline text-[#004080]">Support</a>  -->
+        </nav>
+        <div class="flex items-center space-x-4">
+          <button class="px-4 py-2 bg-[#004080] text-white rounded-full text-sm font-bold leading-normal tracking-wide hover:bg-[#003366]">Edit</button> <!-- Navy color -->
+          <div class="w-10 h-10 rounded-full bg-cover bg-center" style="background-image: url('');"></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-grow container mx-auto py-8 px-6">
+      <div class="grid lg:grid-cols-3 gap-6">
+        <div class="bg-white shadow-lg rounded-lg p-6">
+          <div class="text-center">
+            <div class="w-32 h-32 rounded-full bg-cover bg-center mx-auto mb-4" style="background-image: url('');"></div>
+            <h3 class="text-xl font-bold">Zidan Gimnastiar</h3>
+            <p class="text-sm text-gray-500">087729292929</p>
+            <p class="text-sm text-gray-500">zidane29@gmail.com</p>
+          </div>
+        </div>
+        <div class="bg-white shadow-lg rounded-lg p-6">
+            <div class="text-center">
+              <div class="w-32 h-32 rounded-full bg-cover bg-center mx-auto mb-4" style="background-image: url('');"></div>
+              <h3 class="text-xl font-bold">Ratu Febri Cahya Haliza</h3>
+              <p class="text-sm text-gray-500">087729877654</p>
+              <p class="text-sm text-gray-500">ratu69@gmail.com</p>
+            </div>
+          </div>
+          <div class="bg-white shadow-lg rounded-lg p-6">
+            <div class="text-center">
+              <div class="w-32 h-32 rounded-full bg-cover bg-center mx-auto mb-4" style="background-image: url('');"></div>
+              <h3 class="text-xl font-bold">Alfitho Juliansyah</h3>
+              <p class="text-sm text-gray-500">087778787878</p>
+              <p class="text-sm text-gray-500">toto78@gmail.com</p>
+            </div>
+          </div>
+        <div class="lg:col-span-3 bg-white shadow-lg rounded-lg p-6">
+          <div class="border-b border-gray-200 mb-4">
+            <ul class="flex space-x-6">
+              <li class="border-b-4 border-[#004080] pb-2 text-[#004080] font-bold">My xPay Accounts</li>
+              <li class="pb-2 text-gray-500 hover:text-[#004080] hover:border-b-4 hover:border-[#004080]">My Bills</li>
+            </ul>
+          </div>
+          <div class="space-y-4">
+            <button class="w-full py-3 bg-[#004080] text-white rounded-lg font-bold hover:bg-[#003366]">Phone Bill</button>
+            <button class="w-full py-3 bg-gray-100 text-[#1C160C] rounded-lg font-bold hover:bg-gray-200">Internet Bill</button>
+            <button class="w-full py-3 bg-[#004080] text-white rounded-lg font-bold hover:bg-[#003366]">HSBC Card</button>
+            <button class="w-full py-3 bg-gray-100 text-[#1C160C] rounded-lg font-bold hover:bg-gray-200">Income Tax</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-white py-6 text-center shadow-inner">
+      <p class="text-gray-500 text-sm font-normal">GROUP-9</p>
+    </footer>
+  </div>
+</body>
+</html>
