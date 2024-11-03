@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-blue-100 font-sans leading-normal tracking-normal">
+
+  <!-- Sidebar -->
+  <div class="flex flex-no-wrap">
+    <div class="w-64 bg-blue-900 text-white min-h-screen px-4 py-8">
+      <h2 class="text-2xl font-semibold text-center mb-8">Admin Page</h2>
+      <nav>
+        <a href="#dashboard" class="block py-2 px-4 rounded hover:bg-blue-700">Dashboard</a>
+        <a href="#users_management" class="block py-2 px-4 rounded hover:bg-blue-700">Users Management</a>
+        <a href="#user_settings" class="block py-2 px-4 rounded hover:bg-blue-700">User Settings</a>
+        <a href="#reports" class="block py-2 px-4 rounded hover:bg-blue-700">Reports</a>
+      </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="w-full flex-grow p-6 bg-blue-50">
+      <!-- Header -->
+      <header class="flex items-center justify-between">
+        <h1 class="text-3xl font-semibold text-blue-900">Dashboard</h1>
+        <div>
+          <button class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded">
+            Add New
+          </button>
+        </div>
+      </header>
+
+      <!-- Stats Section with Chart -->
+      <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+        <div class="bg-blue-200 text-blue-900 shadow-md rounded p-4">
+          <h3 class="text-xl font-semibold">Total Users</h3>
+          <p class="text-3xl font-bold">60</p>
+        </div>
+        <div class="bg-blue-200 text-blue-900 shadow-md rounded p-4">
+          <h3 class="text-xl font-semibold">Active Sessions</h3>
+          <p class="text-3xl font-bold">30</p>
+        </div>
+        <div class="bg-blue-200 text-blue-900 shadow-md rounded p-4">
+          <h3 class="text-xl font-semibold">New Sign-ups</h3>
+          <p class="text-3xl font-bold">3</p>
+        </div>
+        <div class="bg-blue-200 text-blue-900 shadow-md rounded p-4">
+          <h3 class="text-xl font-semibold">Reports</h3>
+          <p class="text-3xl font-bold">5</p>
+        </div>
+      </section>
+
+      <!-- User Management Section -->
+      <section id="users_management" class="bg-white shadow rounded-lg p-6 mt-8">
+        <h2 class="text-2xl font-semibold mb-4 text-blue-900">User Management</h2>
+
+        <!-- User Filters -->
+        <div class="flex items-center mb-4">
+          <input type="text" placeholder="Search Users..." class="border border-gray-300 rounded px-4 py-2 mr-4">
+          <button class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded">
+            Add User
+          </button>
+        </div>
+
+        <!-- User Table -->
+        <div class="bg-white shadow overflow-hidden sm:rounded-lg">
+          <table class="min-w-full leading-normal">
+            <thead>
+              <tr>
+                <th class="px-5 py-3 border-b-2 border-gray-200 bg-blue-200 text-left text-xs font-semibold text-blue-900 uppercase tracking-wider">
+                  User ID
+                </th>
+                <th class="px-5 py-3 border-b-2 border-gray-200 bg-blue-200 text-left text-xs font-semibold text-blue-900 uppercase tracking-wider">
+                  Username
+                </th>
+                <th class="px-5 py-3 border-b-2 border-gray-200 bg-blue-200 text-left text-xs font-semibold text-blue-900 uppercase tracking-wider">
+                  Email
+                </th>
+                <th class="px-5 py-3 border-b-2 border-gray-200 bg-blue-200 text-left text-xs font-semibold text-blue-900 uppercase tracking-wider">
+                  Role
+                </th>
+                <th class="px-5 py-3 border-b-2 border-gray-200 bg-blue-200 text-left text-xs font-semibold text-blue-900 uppercase tracking-wider">
+                  Actions
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="px-5 py-5 border-b border-gray-200 bg-blue-50 text-sm text-blue-900">#001</td>
+                <td class="px-5 py-5 border-b border-gray-200 bg-blue-50 text-sm text-blue-900">Alfithoo</td>
+                <td class="px-5 py-5 border-b border-gray-200 bg-blue-50 text-sm text-blue-900">alfitho@example.com</td>
+                <td class="px-5 py-5 border-b border-gray-200 bg-blue-50 text-sm text-blue-900">Admin</td>
+                <td class="px-5 py-5 border-b border-gray-200 bg-blue-50 text-sm">
+                  <button class="text-blue-600 hover:text-blue-800 mr-4">Edit</button>
+                  <button class="text-red-600 hover:text-red-800">Delete</button>
+                </td>
+              </tr>
+              <!-- Tambahkan baris tambahan sesuai kebutuhan -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- User Settings Section -->
+      <section id="user_settings" class="bg-white shadow rounded-lg p-6 mt-8">
+        <h2 class="text-2xl font-semibold mb-4 text-blue-900">User Settings</h2>
+        <form>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-blue-900">Username</label>
+              <input type="text" class="border border-gray-300 rounded px-4 py-2 w-full" placeholder="Username">
+            </div>
+            <div>
+              <label class="block text-blue-900">Email</label>
+              <input type="email" class="border border-gray-300 rounded px-4 py-2 w-full" placeholder="Email">
+            </div>
+            <div>
+              <label class="block text-blue-900">Password</label>
+              <input type="password" class="border border-gray-300 rounded px-4 py-2 w-full" placeholder="New Password">
+            </div>
+            <div>
+              <label class="block text-blue-900">Role</label>
+              <select class="border border-gray-300 rounded px-4 py-2 w-full">
+                <option>Admin</option>
+                <option>User</option>
+                <option>Guest</option>
+              </select>
+            </div>
+          </div>
+          <button class="mt-4 bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded">
+            Update Settings
+          </button>
+        </form>
+      </section>
+
+      <!-- Report Management Section -->
+      <section id="reports" class="bg-white shadow rounded-lg p-6 mt-8">
+        <h2 class="text-2xl font-semibold mb-4 text-blue-900">Report Management</h2>
+        <div class="flex items-center mb-4">
+          <input type="text" placeholder="Search Reports..." class="border border-gray-300 rounded px-4 py-2 mr-4">
+          <select class="border border-gray-300 rounded px-4 py-2">
+            <option>All Reports</option>
+            <option>Pending</option>
+            <option>Resolved</option>
+            <option>Closed</option>
+          </select>
+        </div>
+
+        <div class="bg-white shadow overflow-hidden sm:rounded-lg">
+          <table class="min-w-full leading-normal">
+            <thead>
+              <tr>
+                <th class="px-5 py-3 border-b-2 border-gray-200 bg-blue-200 text-left text-xs font-semibold text-blue-900 uppercase tracking-wider">
+                  Report ID
+                </th>
+                <th class="px-5 py-3 border-b-2 border-gray-200 bg-blue-200 text-left text-xs font-semibold text-blue-900 uppercase tracking-wider">
+                  User
+                </th>
+                <th class="px-5 py-3 border-b-2 border-gray-200 bg-blue-200 text-left text-xs font-semibold text-blue-900 uppercase tracking-wider">
+                  Status
+                </th>
+                <th class="px-5 py-3 border-b-2 border-gray-200 bg-blue-200 text-left text-xs font-semibold text-blue-900 uppercase tracking-wider">
+                  Date
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="px-5 py-5 border-b border-gray-200 bg-blue-50 text-sm text-blue-900">#001</td>
+                <td class="px-5 py-5 border-b border-gray-200 bg-blue-50 text-sm text-blue-900">Alfitho</td>
+                <td class="px-5 py-5 border-b border-gray-200 bg-blue-50 text-sm">
+                  <span class="text-green-600 font-semibold">Resolved</span>
+                </td>
+                <td class="px-5 py-5 border-b border-gray-200 bg-blue-50 text-sm text-blue-900">Oct 1, 2024</td>
+              </tr>
+              <!-- Tambahkan baris tambahan sesuai kebutuhan -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </div>
+
+</body>
+</html>
